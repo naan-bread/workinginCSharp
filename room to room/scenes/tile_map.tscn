@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://7nq8ksd6s5eo"]
+
+[ext_resource type="Texture2D" uid="uid://cesvdj3wgkl0p" path="res://assets/white square 16x16.png" id="1_jodnr"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljeeg"]
+texture = ExtResource("1_jodnr")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_tfklq"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ljeeg")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_tfklq")
+format = 2

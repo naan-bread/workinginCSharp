@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd8mk3tn6o5h8"]
+
+[ext_resource type="PackedScene" uid="uid://7nq8ksd6s5eo" path="res://scenes/tile_map.tscn" id="1_nu77w"]
+[ext_resource type="PackedScene" uid="uid://7212jfdcqveh" path="res://scenes/zone_line.tscn" id="2_eyou2"]
+[ext_resource type="PackedScene" uid="uid://drmakw7narlsa" path="res://scenes/player.tscn" id="3_qs57o"]
+
+[node name="room_2" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_nu77w")]
+modulate = Color(0.870588, 0.588235, 0.67451, 1)
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 0, 327680, 0, 0, 393216, 0, 0, 458752, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 589824, 0, 0, 524288, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 19, 0, 0, 18, 0, 0, 17, 0, 0, 16, 0, 0, 15, 0, 0, 11, 0, 0, 10, 0, 0, 9, 0, 0, 8, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 589843, 0, 0, 655379, 0, 0, 655378, 0, 0, 655377, 0, 0, 655376, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 524307, 0, 0, 458771, 0, 0, 393235, 0, 0, 327699, 0, 0, 262163, 0, 0, 196627, 0, 0, 131091, 0, 0, 65555, 0, 0)
+
+[node name="ZoneLine" parent="." instance=ExtResource("2_eyou2")]
+position = Vector2(-8, 56)
+RoomPath = "res://scenes/room_1.tscn"
+PlayerStart = Vector2(304, 56)
+
+[node name="ZoneLine2" parent="." instance=ExtResource("2_eyou2")]
+position = Vector2(216, -8)
+rotation = 1.5716
+RoomPath = "res://scenes/room_3.tscn"
+PlayerStart = Vector2(216, 160)
+
+[node name="player" parent="." instance=ExtResource("3_qs57o")]
